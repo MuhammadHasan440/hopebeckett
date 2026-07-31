@@ -75,4 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Mobile Menu Drawer Logic
+    const menuBtn = document.getElementById('open-menu');
+    const menuDrawer = document.getElementById('menu-drawer');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const cartOverlay = document.getElementById('cart-overlay'); // We reuse the overlay
+
+    function toggleMenu() {
+        if(menuDrawer) {
+            menuDrawer.classList.toggle('open');
+            cartOverlay.classList.toggle('open');
+        }
+    }
+
+    if(menuBtn) menuBtn.addEventListener('click', toggleMenu);
+    if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking overlay
+    if(cartOverlay) {
+        cartOverlay.addEventListener('click', () => {
+            if(menuDrawer && menuDrawer.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
+    }
 });
