@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Beckett | Newsletter</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme">
+    
+    <div class="cursor-glow"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">HOPE<br>BECKETT</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="store.html" class="nav-link">Store</a></li>
+                    <li><a href="chapters.html" class="nav-link">Chapters</a></li>
+                    <li><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+                </button>
+                <button class="icon-btn cart-btn" id="open-cart" aria-label="Shopping Cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary full-width mt-4" id="checkout-btn">Checkout</button>
+            <div id="paypal-button-container" class="mt-4" style="display: none;"></div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <main id="main-content" style="padding-top: 100px;">
+        
+        <!-- Newsletter & Contact -->
+        <section id="contact" class="newsletter-contact-section section-padding bg-secondary" style="min-height: 70vh; display: flex; align-items: center;">
+            <div class="container split-layout">
+                <!-- Newsletter -->
+                <div class="newsletter-col fade-up">
+                    <h2 class="section-title">Join My Reading Journey</h2>
+                    <p class="subtitle mb-4">Subscribe for exclusive sneek peeks, release dates, and a free prequel novella.</p>
+                    <form id="newsletter-form" class="luxury-form">
+                        <div class="input-group">
+                            <input type="email" id="nl-email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Subscribe</span>
+                                <div class="spinner hide"></div>
+                            </button>
+                        </div>
+                        <div class="form-msg mt-2" id="nl-msg"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-col fade-up delay-1">
+                    <div class="glass-form-container">
+                        <h3 class="form-title mb-4">Send a Message</h3>
+                        <form id="contact-form" class="luxury-form">
+                            <div class="form-row">
+                                <input type="text" id="c-name" placeholder="Name" required>
+                                <input type="email" id="c-email" placeholder="Email" required>
+                            </div>
+                            <div class="form-row mt-3">
+                                <input type="text" id="c-subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-row mt-3">
+                                <textarea id="c-message" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary full-width mt-4 submit-btn">
+                                <span>Send Message</span>
+                                <div class="spinner hide"></div>
+                            </button>
+                            <div class="form-msg mt-2" id="c-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">HOPE<br>BECKETT</div>
+                    <p class="footer-desc mt-2">Crafting worlds of dark fantasy, where every shadow holds a story and every ocean hides a secret.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="chapters.html">Chapters</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-6 pt-4 border-top">
+                <p>&copy; 2026 Hope Beckett. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- PayPal SDK Sandbox -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    
+    <script src="js/store.js"></script>
+    <script src="js/forms.js"></script> <!-- Included fetch logic -->
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cursor.js"></script>
+
+</body>
+</html>

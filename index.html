@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Beckett | Adventure Begins With Every Chapter</title>
+    <meta name="description" content="Immerse yourself in unforgettable historical fantasy adventures filled with pirates, kingdoms, romance and mystery by author Hope Beckett.">
+    
+    <meta property="og:title" content="Hope Beckett | Premium Author">
+    <meta property="og:description" content="Discover dark fantasy, historical romance, and thrilling adventures.">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme">
+    
+    <div class="cursor-glow"></div>
+    <div class="cursor-dot"></div>
+
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <h1 class="loader-title">HOPE BECKETT</h1>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">HOPE<br>BECKETT</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="store.html" class="nav-link">Store</a></li>
+                    <li><a href="chapters.html" class="nav-link">Chapters</a></li>
+                    <li><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+                </button>
+                <button class="icon-btn cart-btn" id="open-cart" aria-label="Shopping Cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary full-width mt-4" id="checkout-btn">Checkout</button>
+            <div id="paypal-button-container" class="mt-4" style="display: none;"></div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <main id="main-content">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg">
+                <!-- Using placeholder for generated bg -->
+                <img src="C:/Users/mattrics/.gemini/antigravity-ide/brain/6bf53fa7-1ea3-4bec-8413-45921d5facdb/dark_fantasy_bg_1785524295134.png" alt="" class="bg-img parallax-bg" aria-hidden="true">
+                <div class="hero-overlay"></div>
+                <div class="floating-particles" id="particles"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <div class="hero-text split-text">
+                    <h1 class="hero-title reveal-text">Adventure<br>Begins With<br><span class="text-accent">Every Chapter</span></h1>
+                    <p class="hero-subtitle reveal-text delay-1">Immerse yourself in unforgettable historical fantasy adventures filled with pirates, kingdoms, romance and mystery.</p>
+                    <div class="hero-buttons reveal-text delay-2" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                        <a href="chapters.html" class="btn btn-primary magnetic-btn">Read Chapter One</a>
+                        <a href="store.html" class="btn btn-secondary magnetic-btn">Official Store</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="book-3d-wrapper" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
+                        <img src="Dancing+With+A+Pirate+Front+Ebook+Cover.webp" alt="Featured Book Cover" class="hero-book">
+                        <div class="book-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Book (Updated Synopsis) -->
+        <section id="books" class="featured-book section-padding">
+            <div class="container split-layout align-center">
+                <div class="visual-col image-reveal">
+                    <div class="book-showcase" data-tilt>
+                        <img src="Dancing+With+A+Pirate+Front+Ebook+Cover.webp" alt="Dancing with a Pirate" class="featured-cover shadow-large">
+                    </div>
+                </div>
+                <div class="content-col fade-up">
+                    <h2 class="section-title">Dancing with a Pirate</h2>
+                    <div class="genre-tags">
+                        <span class="tag">Historical Fantasy</span>
+                        <span class="tag">Romance</span>
+                        <span class="tag">Adventure</span>
+                        <span class="tag">Pirates</span>
+                    </div>
+                    <p class="book-desc">
+                        Liam and Rick are prisoners in the king of Hiverna's court. Destined to escape, and feel freedom once more. They will have to face their past in order to make a future for themselves. How far would you go to be free?
+                    </p>
+                    <p class="book-desc mt-2">
+                        Ines a princess of Hiverna has seen nothing of the world. Trapped in her own cage she is aching for freedom. Will one night change her life forever? Will she be able to trust the ones she once held dear? Thrown into the world of pirates. Ines will have to learn who to trust, or fight for her life.
+                    </p>
+                    
+                    <div class="button-group mt-4">
+                        <a href="https://www.amazon.com/Dancing-Pirate-book-Hope-Beckett-ebook/dp/B0H8RCYQHN" target="_blank" class="btn btn-primary" style="background-color: #FF9900; color: #000;">Amazon</a>
+                        <a href="https://www.goodreads.com/book/show/255390546-dancing-with-a-pirate" target="_blank" class="btn btn-secondary" style="border-color: #e9e5cd; color: #e9e5cd;">Goodreads</a>
+                        <a href="https://www.hopebeckett.com/store" target="_blank" class="btn btn-secondary">Official Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Author -->
+        <section id="about" class="about-section section-padding bg-secondary">
+            <div class="container split-layout align-center">
+                <div class="content-col fade-up">
+                    <h2 class="section-title">The Storyteller</h2>
+                    <h3 class="author-name text-accent">Hope Beckett</h3>
+                    <p class="bio-text">
+                        Hope Beckett weaves tales of dark oceans, forgotten kingdoms, and loves forged in the fires of rebellion. Writing from her cabin in the Pacific Northwest, she spends her days fueled by copious amounts of black coffee, accompanied by her two rescue hounds, and drawing inspiration from the wild, untamed nature outside her window.
+                    </p>
+                    <blockquote class="elegant-quote mt-4">
+                        "A story is just a ship waiting for the reader to set the sails."
+                    </blockquote>
+                </div>
+                <div class="visual-col image-reveal parallax-container">
+                    <img src="authornew.png" alt="Hope Beckett Author Portrait" class="author-img parallax-element">
+                    <div class="img-border"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reader Reviews -->
+        <section id="reviews" class="reviews-section section-padding">
+            <div class="container text-center">
+                <h2 class="section-title fade-up mb-6">Whispers of the Sea</h2>
+                
+                <div class="swiper review-swiper fade-up delay-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review-card glass-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"An absolute masterpiece of fantasy romance. The chemistry is electric, and the world-building is breathtakingly vivid. I couldn't put it down."</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-avatar">S</div>
+                                    <span class="reviewer-name">Sarah J. - Goodreads</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card glass-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"Hope Beckett writes with an elegance that pulls you directly into the storm. The plot twists left me gasping. Easily my favorite read of the year."</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-avatar">M</div>
+                                    <span class="reviewer-name">Michael T. - Amazon</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review-card glass-card">
+                                <div class="stars">★★★★★</div>
+                                <p class="review-text">"If you love pirates, magic, and slow-burn romance with high stakes, this is exactly what you need. A stunning debut."</p>
+                                <div class="reviewer">
+                                    <div class="reviewer-avatar">E</div>
+                                    <span class="reviewer-name">Elena R. - BookTok</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">HOPE<br>BECKETT</div>
+                    <p class="footer-desc mt-2">Crafting worlds of dark fantasy, where every shadow holds a story and every ocean hides a secret.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="chapters.html">Chapters</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-6 pt-4 border-top">
+                <p>&copy; 2026 Hope Beckett. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- PayPal SDK Sandbox -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    
+    <script src="js/store.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cursor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "hope-beckett-website",
+  "version": "1.0.0",
+  "description": "Premium Author Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  }
+}

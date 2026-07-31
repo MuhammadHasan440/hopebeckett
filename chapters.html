@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Beckett | Chapter Preview</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="dark-theme">
+    
+    <div class="cursor-glow"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">HOPE<br>BECKETT</a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="store.html" class="nav-link">Store</a></li>
+                    <li><a href="chapters.html" class="nav-link">Chapters</a></li>
+                    <li><a href="newsletter.html" class="nav-link">Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+                </button>
+                <button class="icon-btn cart-btn" id="open-cart" aria-label="Shopping Cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="cart-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary full-width mt-4" id="checkout-btn">Checkout</button>
+            <div id="paypal-button-container" class="mt-4" style="display: none;"></div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <main id="main-content" style="padding-top: 120px;">
+        <!-- Chapter Preview -->
+        <section id="chapter" class="chapter-preview section-padding">
+            <div class="container reading-container fade-up">
+                <div class="reading-header">
+                    <span class="chapter-num">Dancing with a Pirate</span>
+                    <h2 class="chapter-title">Chapter One</h2>
+                </div>
+                <div class="reading-content typography-editorial">
+                    <p class="drop-cap">T</p>
+                    <p class="indent-p">here was a nip in the air, the first indication that winter was here. The temperature dropped several degrees during the night. Little light seeped through the dark cell below ground. Liam turned his head back and forth, trying to work the circulation through his tired body. He rubbed his hands together to get any warmth that he could, placing his hands under his armpits. The tips of his fingers, white from lack of heat, grazed the edge of the folded parchment he kept in his shirt pocket.</p>
+                    <p class="indent-p">Liam had been given the letter a couple days ago by the delivery boy who came by once a month. This was the first delivery he had received in the five years he had been in this dump.</p>
+                    
+                    <blockquote class="elegant-quote mt-4 mb-4" style="text-align: center; font-style: italic;">
+                        The letter read:<br><br>
+                        Capture the princess and retrieve the necklace, to earn your way to freedom. - King G.
+                    </blockquote>
+                    
+                    <p class="indent-p">Liam had racked his brain for the last two days straight. Who was this King G.? Had he met him before? Necklace? What necklace? He had met many men on his journeys as a pirate. Liam would need to come up with a plan and fast, then relay it to Rick. This could be their chance at escape. The risk was great for sure. But one he would willingly take. A lifetime in prison was a hefty sentence.</p>
+                    <p class="indent-p">He shared a cell with Rick, his trusted first mate, though they were unable to reach each other. Both shackled by their ankles to the wall during the night.</p>
+                    <p class="indent-p">The only time he and his fellow inmates were able to see any signs of life was when they were let out to work.</p>
+                    <p class="indent-p">The brutal work of lifting stones out of the ditch and moving them across the castle was torture on the body. The task was insignificant and meaningless, but king Henry thought it a fitting punishment for the inmate's crimes.</p>
+                    <p class="indent-p">The weak never survived. The winter months would be harder, and with the lack of supplies, it would be impossible for the guards to keep all the prisoners warm, let alone fed. It would be a miracle if half of them lived to see the next summer.</p>
+                    <p class="indent-p">His muscles ached from the long hours he spent shoveling the new ditches king Henry had ordered. Huge boulders had to be removed from the earth as they dug deeper and deeper.</p>
+                    <p class="indent-p">The hardest part was doing all this hard labor in chains because the guards did not trust them not to break out in a fight or try to escape. Who could blame them? The prisoners were known killers; they had taken lives. No guard wanted the inmates close enough to take them down. Even though the guards had been heavily trained in the King's army, they were no match for the monsters that rested below, rotting away in the cells.</p>
+                    <p class="indent-p">It could also be the fact that Liam had slid a knife into his pocket one night after the guards came by with the dinner tray and sliced a guard’s throat. The man had wiggled around on the ground gasping for air like a fish out of water. It was a sight to behold.</p>
+                    <p class="indent-p">After that the prisoners had extra guards posted and were never allowed out of their shackles. Liam received the worst beating of his life that night. It took three guards to administer the punishment. Liam was left gasping for air. He hated each man worse than the one before. They held nothing back.</p>
+                    <p class="indent-p">King Henry even went the extra mile, each night he sent a guard to their cell. The guards were ordered to beat each prisoner to a living pulp. The unlucky ones even got buggered here and there. Liam took his beatings every night. Each time he would hide his pain until the guards left. He did not want to show any weakness. The guards eventually grew bored with the lack of emotion from Liam; they didn’t come around his cell as often.</p>
+                    <p class="indent-p">Rick on the other hand... the unlucky son of a bitch, had received more visits from the guards. Maybe that was more of a punishment for Liam than getting his ass beat. Since he was chained to the opposite end of the cell, he was unable to rescue his mate from the awful guard they called Jeff.</p>
+                    <p class="indent-p">If he was on duty, the prisoners had better hope he didn’t pick them as his target. He punished the inmates just for sport. Jeff would find more twisted ways to torture them every time he entered the cell. Thankfully, he didn’t work often down here. Jeff said he did not care much for the stench. The inmates were thankful for that, at least. When Rick and Liam did escape Jeff would be the first man Liam would go after. Jeff did not deserve to see the light of another day.</p>
+                    <p class="indent-p">Soon they would be given a warmer set of the dark blue suits to wear. That was it. No blankets, no pillows. Just a wooly suit. The wool was so scratchy, they would all be rubbing their backs against the stone walls they now called home.</p>
+                    <p class="indent-p">Each day greeted them the same. At seven o’clock, the inmates ate breakfast that consisted of unseasoned porridge and milk. At eight, the guards would begin their inspection to make sure they did not smuggle anything from breakfast to their cells.</p>
+                    <p class="indent-p">At nine, they would be sent out to work until sundown, then get a meal at the end of the day. Always the same: bread, meat, and milk.</p>
+                    <p class="indent-p">Liam leaned his head against the cold cell door. Any minute now his number would be called. He held a piece of paper in his hand; the ink read number twenty-three. This was his ticket to freedom. Well maybe not freedom per se, but it would sure feel like it to him.</p>
+                    <p class="indent-p">“Everyone step forward. Turn to the right. Lift your arms,” the soldiers ordered, searching the inmates every time they stepped out of their cells. Like there was anything worth smuggling in this place.</p>
+                    <p class="indent-p">Rick slithered in line behind Liam.</p>
+                    <p class="indent-p">“Ready to execute the plan, Captain?" Rick’s breath was horrid. They had not been able to brush their teeth since arriving. One of Rick’s upper teeth was starting to yellow. Liam could tell one of his own was starting to do the same.</p>
+                    <p class="indent-p">“Once we get out of the castle, we need to find a layout of the exits. I am sure King Henry will have extra guards posted tonight.” Rick pretended to pick lint off his pants, he avoided Liam’s face as they whispered to each other.</p>
+                    <p class="indent-p">“I will see what I can do. Charming the ladies is my specialty.” Liam rolled his eyes at Rick’s true but ridiculous way to receive information. It had saved them several times on their pirating ventures.</p>
+                    <p class="indent-p">“We will also need weapons, in case things go south.”</p>
+                    <p class="indent-p">Rick could not have agreed more. This plan was not very solid. Yet it was the only one they had. Tonight would be the only chance of escape. At the king's annual Christmas ball, where they’d each be heavily searched and heavily guarded. Yet this was the night Rick and Liam decided to make a move.</p>
+                    <p class="indent-p">“Twenty-three. Twenty-three, step forward,” one of the guards called.</p>
+                    <p class="indent-p">It was Liam’s turn to step up on the worn-out wooden stool to get examined. They had finally called his number. Liam had waited patiently all morning.</p>
+                    <p class="indent-p">He was not sure of the time, but judging by the way the air felt, it had to be a little after nine in the morning. Each day, the prisoners would hope their number was called. Even though it meant they had to work. It beat spending the day with one's thoughts in the damp darkness.</p>
+                    <p class="indent-p">“Lift your arms,” a soldier said in a monotone voice.</p>
+                    <p class="indent-p">Liam did as he was told; his chains rattled as he lifted his arms above his head. He ran through their plan over and over. At noon when they are outside, two men—paid off with an entire month’s rations—would create a distraction. Once free they would make a run for it. If the temperature was too cold, they would find a way into the annual christmas ball and hide out until it was safe to travel. That would pose more risk, since guards would be posted for the occasion. But it was the best plan they had.</p>
+                    <p class="indent-p">The night before Rick and Liam discussed the plan at length. Liam and Rick waited in their cell for the guards to disperse until only one remained at their post by the door on the outer side. This left opportunities for the soldiers to look the other way when the torture began. Once the coast was clear, Liam whispered over to Rick.</p>
+                    <p class="indent-p">“We need a plan of escape. The ball might just be our chance.” Rick’s shackles jangled as he tried to find a comfortable spot against the ground. Liam tried to do the same. Everywhere he turned, a rock would poke him in the back.</p>
+                    <p class="indent-p">“What’s your plan, Captain?” Rick was just as eager to leave this place as he was.</p>
+                    <p class="indent-p">“Once we are outside, Levi and Lucas will create a distraction. While the guards run after them, you will use your pickpocket skills to get the keys. Then we will run into the castle, find clothes, and sneak into the ball.” Liam knew his plan sounded impossible, but it was the only plan they had.</p>
+                    <p class="indent-p">“Which one of us gets to track down our attire for the ball?” Rick gave up trying to lay down. Liam gave up the fight himself and sat up in the dark cell. Liam glimpsed over to where he imagined Rick perched.</p>
+                    <p class="indent-p">“I thought I would leave that task to you.” Liam picked up a pebble that sliced his ankle; he tossed it over to Rick’s side of the cell.</p>
+                    <p class="indent-p">“Aye, Captain. I won’t let you down.”</p>
+                    <p class="indent-p">“I never thought you would. Once we find our way into the ball we will need to locate the princess.”</p>
+                    <p class="indent-p">“And the necklace?” Rick’s voice grew higher with excitement.</p>
+                    <p class="indent-p">“We may need to forget the necklace. I don't even know where to begin to look. We are out of time.”</p>
+                    <p class="indent-p">“Didn’t Alfey say the necklace was an emerald, which contained a secret map?”</p>
+                    <p class="indent-p">“That old man was always spinning tales. Who knows what is real or not.” Liam tried to lean back against the cell wall. It was ice cold, but his tight muscles relaxed.</p>
+                    <p class="indent-p">“What if he is right?”</p>
+                    <p class="indent-p">“Alfey also said the map could only be read by the chosen bloodline. Even if we find the necklace, who's to say we can read it?” All of these mysteries made Liam’s head throb.</p>
+                    <p class="indent-p">“Okay, okay. So we get to the ball, find the princess and get the hell out of dodge.” Rick muttered.</p>
+                    <p class="indent-p">“That’s the plan.” Liam’s whispers barely reached the other side of the cell.</p>
+                    <p class="indent-p">“Why can’t we just run? Do we need the princess?” Rick asked.</p>
+                    <p class="indent-p">“According to the letter the princess is key. Maybe she knows the location of the treasure?”</p>
+                    <p class="indent-p">“What about the code?” Rick whispered.</p>
+                    <p class="indent-p">“We will have to hang the code this once my friend. I am not taking any chances. The necklace, and the princess are what we need to get out of here.”</p>
+                    <p class="indent-p">“Have you seen her?”</p>
+                    <p class="indent-p">“No. We know her name is Ines. I am sure we will learn more once we have access to the ball.”</p>
+                    <p class="indent-p">“Captain, did the letter have coordinates where to take the princess?” Liam removed the letter from his pocket. He slowly unfolded the edges. He did not want to leave anything to chance. He scanned the contents of the letter to see if he missed a hidden message.</p>
+                    <p class="indent-p">“Rick, there is nothing here.”</p>
+                    <p class="indent-p">“Maybe Alfey is right. Maybe the necklace is key.”</p>
+                    <p class="indent-p">“Alright Rick. Once we are in the castle, I will start searching for the necklace.”</p>
+                    <p class="indent-p">“This is risky, Captain."</p>
+                    <p class="indent-p">“I know Rick. But it is our only hope to escape.”</p>
+                    <p class="indent-p">“I am with you. No matter what happens.”</p>
+                    <p class="indent-p">“I never doubted you.”</p>
+                    <p class="indent-p">Once both men settled on a plan, they remained silent in case anyone eavesdropped. Information was worth more than gold down here. If they were caught whispering of escape, it could very well be the last thing they discussed.</p>
+                    <p class="indent-p">Alfey had told Liam he had seen the princess once. Alfey had said she was a sight to behold.</p>
+                    <p class="indent-p">Liam fisted his hands at his side. How can I go against my own code? When the time came could I really take her against her will?</p>
+                    <p class="indent-p">I am a pirate. I will put my feelings aside to save my friend. Henry needs to pay and be taught a lesson. The letter did not specify what was to be done with the princess. Maybe we could let her go?</p>
+                    <p class="indent-p">“Turn” The guard drew him from his thoughts.</p>
+                    <p class="indent-p">Liam’s goal was to lie low and do what he was told. He was not trying to be disobedient. No, he was trying to buy time to escape. This was the only goal: to get Rick and himself out of the North and onto the seas once more.</p>
+                    <p class="indent-p">“Turn, the other way” the soldier demanded. Liam did as he asked. The clanking of the chains made it hard to move more than a couple of steps at a time. The guards were patient, though. Mostly.</p>
+                    <p class="indent-p">“Lift off your shirt,” the guard commanded. Liam lifted his arms and wiggled his dark blue shirt off the best he could. It snagged around the chains that bound his wrists. The guard pulled the shirt off the rest of the way. Since Liam's job consisted of lifting heavy stones all day, his brawny tan muscles relaxed as the shirt came off. They always gave him a size too small. Liam could take three guards at once with his size, but that would be stupid. He wanted to escape, if he caused trouble now it would not help his case.</p>
+                    <p class="indent-p">King Henry would personally tear their guts out slowly until he begged for death. Even if Liam made it through these guards, there would be a hundred more waiting for him just outside the door.</p>
+                    <p class="indent-p">“Open your mouth,” the guard on Liam’s left said. He was a heavy-set man and probably spent his time eating too much of the king's bounty and drinking too much wine. He reeked of last night's port.</p>
+                    <p class="indent-p">Liam held his breath as the guard leaned in close to inspect his mouth. He patted Liam's shoulder, letting him know he was all done with his inspection. Liam moved down the line.</p>
+                    <p class="indent-p">The next part was Liam’s least favorite of the inspection. But he could see why they checked. One man tried to smuggle bread up his butt once. Why he would want to eat it after being up there was beyond Liam. He must have been desperate, but it cost him his hand. He also received twenty lashes. The king was not merciful.</p>
+                    <p class="indent-p">Liam stepped up to the next wooden stool. He waited for the guard to ask him to remove his pants. Doing so before being asked would get him ten lashes and no dinner. This guard was skinny. Liam tried not to use any of the guards’s names. That was too personal. He knew them, he just refused to call them by their given name. Gave them too much power.</p>
+                    <p class="indent-p">The slender guard with a brown mustache was always good about getting the prisoners extra bread when he was on the meal shift. What he did to deserve being on this inspection, Liam did not know.</p>
+                    <p class="indent-p">“Pants,” the guard said in a flat tone, Liam kept his gaze straight ahead. Liam pulled down his dark blue pants that matched his shirt. It slid down to just above the chains that were also attached to his ankles. They left no stone unturned. The guard unlocked one of Liam’s ankle cuffs to slide the pant leg off, and then reattached the cuff and did the same to the other side.</p>
+                    <p class="indent-p">“Bend,” the guard commanded.</p>
+                    <p class="indent-p">Liam closed his eyes, he tried to think of a better time. A time when he was free. When he sailed on the ocean. The breeze from the saltwater hit his face. There was a thud in the background, it drew him from his thoughts. Before he knew it, the inspection was over. Thank the stars.</p>
+                    <p class="indent-p">Someone caused the inspection to halt. This can’t be good. Liam looked over the line of the prisoner's shoulders to see what had happened. Five rows down at the toe inspection, someone was on the ground. A massive guard leaned over him. Blood pooled on the dirty ground around the guards' boots.</p>
+                    <p class="indent-p">“You bastard, I just cleaned these.” The guard yelled at the lump on the ground.</p>
+                    <p class="indent-p">It was hard to make out which prisoner laid on in the dirt the guards had rushed over to stop the bleeding. Jeff stood over the prisoner with a toe in his left hand and a knife in his right. Ear-piercing screams echoed across the stone walls.</p>
+                    <p class="indent-p">“Why did you cut his toe, Jeff?” one guard commanded. He looked as though he were about to retch.</p>
+                    <p class="indent-p">Jeff dangled the toe in front of the guard's face, and the guard whacked it away, the toe flew across the dirt floor.</p>
+                    <p class="indent-p">“Do I need a reason for these filthy pigs?” Jeff remarked with a breath of laughter.</p>
+                    <p class="indent-p">“We will take it from here. Go up and make sure we have enough guards for tonight,” the commanding officer told Jeff.</p>
+                    <p class="indent-p">He nodded and went up the spiral stairs. One of the pudgy guards acquired a cloth and a poker from the fire that blazed with red ambers. He walked over to the prisoner who lay on the ground.</p>
+                    <p class="indent-p">“Hold him down and shove something in his mouth so he doesn’t bite off his tongue,” he demanded, and five guards ran over to pin the prisoner down. “Ready?”</p>
+                    <p class="indent-p">“That’s Alfey.” Rick inched beside Liam’s right. “Poor guy. He has been waiting a week for his number to be called.”</p>
+                    <p class="indent-p">Alfey had been locked up for murdering his brother-in-law. Alfey walked in on his brother-in-law beating his sister to a pulp. Truth be told, Liam agreed with Alfey: the bastard deserved what he got.. That had been over twenty years ago. Alfey was sixty years old now, though he still got around better than most young men. He was a lifer like the rest of them. Alfey did not deserve that fate. He only did what was right by his sister.</p>
+                    <p class="indent-p">The officers nodded. He pressed the poker to Alfey's toe, cauterizing the wound, so it would not get infected. Alfey wailed, everyone had to plug their ears. Then he passed out. The guards finished patching up the wound then dragged him back into his cell. Alfey would miss the day’s work. Liam felt bad for the bastard. He would miss out on his dinner for causing a scene. Unfair, since he did not even cause the ruckus to begin with.</p>
+                    <p class="indent-p">Tonight was too valuable of a time for things to go wrong. Both Rick and himself needed to be well and ready for whatever came their way. Their escape would not be easy.</p>
+                    <p class="indent-p">The guards went back to work, and lined all the prisoners back inside the stations and pretended like nothing happened. If this got back to the king, Jeff would probably lose his post or worse, his life. But the guards were too scared of him to rat him out.</p>
+                    <p class="indent-p">They ushered Liam over to get sized for his winter suit; the wooly material scratched down his back as they pulled it over his body. He hated the material. It reminded him of the orphanage when the fleas would bite him during the night.</p>
+                    <p class="indent-p">Liam had once sailed to every region, curious to learn about the different cultures and what they had to offer. He had yet to find a place to settle down. Maybe it was the freedom of being on the open sea with the wind upon his back, but that freedom was gone.</p>
+                    <p class="indent-p">The fibers of the wool embedded their way into his back. He knew better than to scratch when the guards were around.</p>
+                    <p class="indent-p">The thin guard from earlier showed him up the spiral stone steps. This was it. This was what he had been waiting for. Three months to be exact.</p>
+                    <p class="indent-p">Liam thought about what a hot bath would feel like. After five years of prison, he did not think he could endure a lifetime of cold showers from the guards. Sure, they got washed up here, but it was normally a frozen bucket of water dumped over their heads while they scrubbed themselves as fast as they could with a bar of soap, followed by another bucket of ice-cold liquid.</p>
+                    <p class="indent-p">The skinny guard led Liam and the other prisoners up the stairs. Followed behind them were three other guards. Liam risked a glance back to see the place he had called home for the last five years. He hoped it would be the last time he saw the dreadful place. Tonight was his one and only chance to feel like a human again. He was so close he could taste it. He just had to make it up the last few steps alive.</p>
+                </div>
+                <div class="reading-footer text-center mt-6">
+                    <div class="reading-progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <button class="btn btn-primary mt-4" style="background-color: #FF9900; color: #000;" onclick="window.open('https://www.amazon.com/Dancing-Pirate-book-Hope-Beckett-ebook/dp/B0H8RCYQHN', '_blank')">Buy on Amazon</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">HOPE<br>BECKETT</div>
+                    <p class="footer-desc mt-2">Crafting worlds of dark fantasy, where every shadow holds a story and every ocean hides a secret.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="chapters.html">Chapters</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="TikTok">TK</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-6 pt-4 border-top">
+                <p>&copy; 2026 Hope Beckett. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <!-- PayPal SDK Sandbox -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    
+    <script src="js/store.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cursor.js"></script>
+
+</body>
+</html>
