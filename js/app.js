@@ -28,29 +28,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     gsap.ticker.lagSmoothing(0, 0);
 
-    // 2. Initialize Swiper for Reviews
-    const reviewSwiper = new Swiper('.review-swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-    });
+    // 2. Initialize Swiper for Reviews (only on pages that have it)
+    const reviewEl = document.querySelector('.review-swiper');
+    if (reviewEl) {
+        new Swiper('.review-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+        });
+    }
 
     // 3. Header Scroll Effect
     const header = document.querySelector('.site-header');
@@ -77,27 +80,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. Mobile Menu Drawer Logic
-    const menuBtn = document.getElementById('open-menu');
+    const menuBtn    = document.getElementById('open-menu');
     const menuDrawer = document.getElementById('menu-drawer');
     const closeMenuBtn = document.getElementById('close-menu');
-    const cartOverlay = document.getElementById('cart-overlay'); // We reuse the overlay
+    const menuOverlay  = document.getElementById('menu-overlay');
 
-    function toggleMenu() {
-        if(menuDrawer) {
-            menuDrawer.classList.toggle('open');
-            cartOverlay.classList.toggle('open');
-        }
+    function openMenu() {
+        if (!menuDrawer) return;
+        menuDrawer.classList.add('open');
+        menuOverlay.classList.add('open');
+        menuBtn.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // prevent background scroll
     }
 
-    if(menuBtn) menuBtn.addEventListener('click', toggleMenu);
-    if(closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking overlay
-    if(cartOverlay) {
-        cartOverlay.addEventListener('click', () => {
-            if(menuDrawer && menuDrawer.classList.contains('open')) {
-                toggleMenu();
-            }
-        });
+    function closeMenu() {
+        if (!menuDrawer) return;
+        menuDrawer.classList.remove('open');
+        menuOverlay.classList.remove('open');
+        menuBtn.classList.remove('is-open');
+        document.body.style.overflow = '';
     }
+
+    if (menuBtn)      menuBtn.addEventListener('click', openMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+    if (menuOverlay)  menuOverlay.addEventListener('click', closeMenu);
+
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
 });

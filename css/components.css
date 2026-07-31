@@ -5,38 +5,43 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    border-radius: 50px; /* Pill shape for premium feel */
     cursor: pointer;
     transition: all var(--transition-fast);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .btn-primary {
-    background-color: var(--c-white);
+    background: linear-gradient(135deg, var(--c-white) 0%, var(--c-light-blue) 100%);
     color: var(--c-bg-primary);
+    box-shadow: 0 4px 15px rgba(169, 214, 255, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: var(--c-accent);
-    color: var(--c-white);
-    box-shadow: 0 0 20px var(--c-glow);
+    background: linear-gradient(135deg, var(--c-white) 0%, var(--c-white) 100%);
+    color: var(--c-bg-primary);
+    box-shadow: 0 10px 25px var(--c-glow);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: var(--c-white);
-    border: 1px solid var(--c-white);
+    background-color: rgba(169, 214, 255, 0.05);
+    color: var(--c-light-blue);
+    border: 1px solid var(--c-border-light);
+    backdrop-filter: blur(5px);
 }
 
 .btn-secondary:hover {
-    background-color: var(--c-white);
-    color: var(--c-bg-primary);
+    background-color: rgba(169, 214, 255, 0.15);
+    color: var(--c-white);
+    border-color: var(--c-light-blue);
+    transform: translateY(-2px);
 }
 
 .icon-btn {
@@ -62,6 +67,47 @@
 .icon-btn svg {
     width: 20px;
     height: 20px;
+}
+
+/* Override for hamburger menu-btn — bars need explicit centering */
+.menu-btn {
+    position: relative;
+}
+
+.menu-btn .bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;
+    height: 2px;
+    background-color: var(--c-white);
+    border-radius: 2px;
+    /* center the bar at the button's midpoint, then shift via translateY */
+    transform: translateX(-50%) translateY(-7px);
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity   0.2s ease;
+}
+
+.menu-btn .bar-2 {
+    transform: translateX(-50%) translateY(0px);
+}
+
+.menu-btn .bar-3 {
+    transform: translateX(-50%) translateY(7px);
+}
+
+/* Active (X) state */
+.menu-btn.is-open .bar-1 {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+
+.menu-btn.is-open .bar-2 {
+    opacity: 0;
+    transform: translateX(-10px) translateY(0px);
+}
+
+.menu-btn.is-open .bar-3 {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
 }
 
 .cart-btn .cart-badge {
@@ -141,25 +187,26 @@
 }
 
 .product-card {
-    background-color: var(--c-card);
-    border-radius: 8px;
-    padding: 1.5rem;
+    background: linear-gradient(180deg, var(--c-card) 0%, rgba(15, 29, 46, 0.2) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
     border: 1px solid var(--c-border);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border-color: rgba(45, 140, 255, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border-color: var(--c-border-light);
 }
 
 .product-img-wrapper {
     position: relative;
     padding: 2rem;
-    background-color: var(--c-bg-primary);
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
+    background: radial-gradient(circle, rgba(169, 214, 255, 0.1) 0%, transparent 70%);
+    border-radius: 8px;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -215,13 +262,16 @@
 
 /* Glass Cards */
 .glass-card {
-    background: rgba(19, 38, 61, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(169, 214, 255, 0.05) 0%, rgba(15, 29, 46, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--c-border);
-    border-radius: 8px;
-    padding: 3rem 2rem;
+    border-top: 1px solid var(--c-border-light);
+    border-left: 1px solid var(--c-border-light);
+    border-radius: 16px;
+    padding: 4rem 3rem;
     text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .review-text {

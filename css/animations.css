@@ -61,23 +61,25 @@
 }
 
 .cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--c-white);
+    width: 6px;
+    height: 6px;
+    background-color: var(--c-light-blue);
+    box-shadow: 0 0 10px var(--c-light-blue);
 }
 
 .cursor-glow {
     width: 40px;
     height: 40px;
-    border: 1px solid var(--c-border);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    border: 1px solid rgba(169, 214, 255, 0.4);
+    transition: width 0.3s cubic-bezier(0.19, 1, 0.22, 1), height 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s, border-color 0.3s;
 }
 
 .cursor-glow.magnetic {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255,255,255,0.05);
-    border-color: var(--c-accent);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(169, 214, 255, 0.1);
+    border-color: var(--c-light-blue);
+    box-shadow: 0 0 30px rgba(169, 214, 255, 0.2);
 }
 
 /* Hide cursor on small screens */

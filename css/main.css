@@ -1,16 +1,17 @@
-/* main.css - Core variables, typography, and global resets */
 :root {
-    /* Color Palette */
-    --c-bg-primary: #07121F;
-    --c-bg-secondary: #0F1D2E;
-    --c-card: #13263D;
+    /* Premium Color Palette */
+    --c-bg-primary: #050b14;
+    --c-bg-secondary: #0a131e;
+    --c-card: rgba(15, 29, 46, 0.6);
     --c-accent: #2D8CFF;
     --c-accent-hover: #4FA9FF;
+    --c-light-blue: #A9D6FF; /* The requested light blue */
     --c-white: #FFFFFF;
     --c-white-soft: #F4F7FA;
-    --c-text-secondary: #B8C5D6;
-    --c-border: rgba(255, 255, 255, 0.08);
-    --c-glow: rgba(45, 140, 255, 0.4);
+    --c-text-secondary: #8c9eb5;
+    --c-border: rgba(169, 214, 255, 0.15); /* Light blue tinted borders */
+    --c-border-light: rgba(169, 214, 255, 0.3);
+    --c-glow: rgba(169, 214, 255, 0.4);
 
     /* Typography */
     --font-heading: 'Bungee', 'Rubik Mono One', sans-serif;
@@ -18,16 +19,16 @@
     --font-body: 'Manrope', sans-serif;
 
     /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 8rem;
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1.5rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 5rem;
+    --spacing-xl: 10rem;
 
     /* Transitions */
     --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-    --transition-fast: 0.3s var(--ease-out-expo);
-    --transition-slow: 0.8s var(--ease-out-expo);
+    --transition-fast: 0.4s var(--ease-out-expo);
+    --transition-slow: 1s var(--ease-out-expo);
 }
 
 /* Reset */

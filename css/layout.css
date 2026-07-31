@@ -96,7 +96,7 @@
 
 @media (max-width: 1024px) {
     .main-nav {
-        display: none; /* In a full build, add a hamburger menu */
+        display: none;
     }
 }
 
@@ -231,66 +231,148 @@
     }
 }
 
-/* Mobile Sidebar Menu Styles */
+/* ============================
+   Mobile Hamburger Menu
+   ============================ */
+
+/* Hidden on desktop, shown on tablet/mobile */
 .menu-btn {
     display: none;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
 }
 
 @media (max-width: 1024px) {
     .menu-btn {
-        display: flex !important;
+        display: flex;
     }
 }
 
+/* Bar positioning and animations are defined in components.css */
+
+
+/* Drawer slides in from the right */
 .menu-drawer {
     position: fixed;
     top: 0;
-    right: -400px;
+    right: 0;
     width: 100%;
     max-width: 400px;
     height: 100vh;
-    background-color: var(--c-bg-secondary);
+    background: linear-gradient(160deg, #0a131e 0%, #07121F 100%);
     border-left: 1px solid var(--c-border);
-    z-index: 1000;
-    transition: right var(--transition-fast);
+    z-index: 1001;
     display: flex;
     flex-direction: column;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -20px 0 60px rgba(0,0,0,0.7);
+    /* Closed state */
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                visibility 0s linear 0.5s;
 }
 
 .menu-drawer.open {
-    right: 0;
+    transform: translateX(0%);
+    visibility: visible;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                visibility 0s linear 0s;
+}
+
+/* Dedicated menu overlay (separate from cart overlay) */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0s linear 0s;
 }
 
 .menu-header {
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     border-bottom: 1px solid var(--c-border);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .mobile-nav {
-    padding: 2rem;
+    padding: 3rem 2.5rem;
+    flex: 1;
 }
 
 .mobile-nav ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.25rem;
+}
+
+.mobile-nav li {
+    overflow: hidden;
 }
 
 .mobile-nav a {
     font-family: var(--font-title);
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--c-white-soft);
+    letter-spacing: 2px;
     position: relative;
-    display: inline-block;
-    transition: color var(--transition-fast);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.mobile-nav a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--c-light-blue), var(--c-accent));
+    transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .mobile-nav a:hover {
-    color: var(--c-accent);
+    color: var(--c-light-blue);
+    padding-left: 1rem;
+}
+
+.mobile-nav a:hover::before {
+    width: calc(100% - 1rem);
+}
+
+/* Staggered entrance for menu items */
+.menu-drawer.open .mobile-nav li {
+    animation: slideInItem 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.menu-drawer.open .mobile-nav li:nth-child(1) { animation-delay: 0.1s; }
+.menu-drawer.open .mobile-nav li:nth-child(2) { animation-delay: 0.15s; }
+.menu-drawer.open .mobile-nav li:nth-child(3) { animation-delay: 0.2s; }
+.menu-drawer.open .mobile-nav li:nth-child(4) { animation-delay: 0.25s; }
+
+@keyframes slideInItem {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
